@@ -18,7 +18,7 @@ import Paths from './Utiles/Paths';
 import { use } from 'react';
 import BlogDetails from './pages/BlogDetails';
 import MyPost from './pages/MyPost';
-import MYComments from './pages/MYComments';
+import MyComments from './pages/MyComments';
 import UpdateBlog from './pages/UpdateBlog';
 
 function App() {
@@ -75,7 +75,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path='/dashboard' element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
           <Route path='/my-post' element={<ProtectedRoute><MyPost/></ProtectedRoute>} />
-          <Route path='/my-comment' element={<ProtectedRoute><MYComments/></ProtectedRoute>} />
+          <Route path='/my-comment' element={<ProtectedRoute><MyComments/></ProtectedRoute>} />
           
           <Route path='/details/:id' element={<BlogDetails/>} />
           <Route path='/create-post' element={<ProtectedRoute><CreatePost /></ProtectedRoute>} />
