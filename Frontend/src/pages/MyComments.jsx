@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Paths from '../Utiles/Paths';
 
-function MYComments() {
+function MyComments() {
   const [comments, setComments] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -52,4 +52,4 @@ function MYComments() {
   );
 }
 
-export default MYComments;
+export default MyComments;
