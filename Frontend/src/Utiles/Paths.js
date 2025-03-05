@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:3000";
+const BASE_URL = "https://blogverse-backend-oro2.onrender.com";
 
 export const API_PATHS = {
     AUTH: {
