@@ -45,11 +45,9 @@ exports.signin = async (req, res) => {
     ismatch = await bcrypt.compare(password, getuser.password);
     if (ismatch) {
       const token = jwt.sign({ _id: getuser.id, email: getuser.email }, process.env.JET_KEY);
-      res.cookie("token", token, {
-        httpOnly: true,
-        secure: process.env.NODE_ENV === "production",
-        maxAge: 36000000
-      });
+      res.cookie("token", token, 
+       {httpOnly: true, secure: true, sameSite: "None"}
+      );
       return res.status(200).json({ data: token });
     } else {
       return res.status(400).json({ message: "User not Found" });
